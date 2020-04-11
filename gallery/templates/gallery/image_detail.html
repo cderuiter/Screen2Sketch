@@ -1,0 +1,24 @@
+{% extends "gallery/base.html" %}
+{% block content %}
+<article class="media content-section">
+	<div class="media-body">
+		<div class="row text-center">
+			<img height="300" width="300" class="mx-auto d-block" src="{{image.Coloring_Page.url}}">
+
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<a class="btn btn-secondary btn-sm mt-3 mb-1" href="{% url 'page-download' image.id %}">Download</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'edit-page' image.id %}">Edit</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</article>
+{% endblock content %}
